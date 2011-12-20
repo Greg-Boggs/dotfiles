@@ -11,5 +11,5 @@ set noantialias
 set guifont=Courier\ New:h12
 
 call pathogen#infect()
-map <F2> :NERDTreeToggle
+map <F2> :NERDTreeToggle<CR>
 
