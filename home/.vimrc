@@ -6,7 +6,7 @@ set expandtab
 set tabstop=2
 set nobackup 
 
-colorscheme torte
+colorscheme railscasts
 set noantialias
 set guifont=Courier\ New:h12
 
