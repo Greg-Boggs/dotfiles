@@ -16,3 +16,6 @@ function setprompt {
 setprompt
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM functionality
+export CLICOLOR="YES"
+export LSCOLORS="ExGxFxdxCxDxDxhbadExEx"
+
