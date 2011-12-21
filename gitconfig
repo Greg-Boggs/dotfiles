@@ -4,3 +4,7 @@
 [color]
 	ui = true
 	diff = true
+[core]
+	autocrlf = input
+[apply]
+	whitespace = nowarn
