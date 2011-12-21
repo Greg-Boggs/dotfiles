@@ -14,3 +14,5 @@ function setprompt {
   PS1="$GREEN\w$CYAN\$(parse_git_branch)$LIGHT_GREEN$ $RESET"
 }
 setprompt
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM functionality
