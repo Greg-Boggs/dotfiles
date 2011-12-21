@@ -13,3 +13,6 @@ set guifont=Courier\ New:h12
 call pathogen#infect()
 map <F2> :NERDTreeToggle<CR>
 
+set laststatus=2
+set statusline=%t[%{strlen(&fenc)?&fenc:'none'}]%h%m%r\ %l/%L,%c\ %P\ %{fugitive#statusline()}
+
