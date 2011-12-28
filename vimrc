@@ -16,3 +16,5 @@ map <F2> :NERDTreeToggle<CR>
 set laststatus=2
 set statusline=%t[%{strlen(&fenc)?&fenc:'none'}]%h%m%r\ %l/%L,%c\ %P\ %{fugitive#statusline()}
 
+
+autocmd BufRead,BufNewFile *.hlp,*.nws,*.ahelp,*.evt,*.txt set cc=80
