@@ -6,5 +6,6 @@
 	diff = true
 [core]
 	autocrlf = input
+	excludesfile = /Users/tkrajcar/.gitignore
 [apply]
 	whitespace = nowarn
