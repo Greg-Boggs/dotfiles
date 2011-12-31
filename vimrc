@@ -19,3 +19,10 @@ set statusline=%t[%{strlen(&fenc)?&fenc:'none'}]%h%m%r\ %l/%L,%c\ %P\ %{fugitive
 autocmd BufRead,BufNewFile *.hlp,*.nws,*.ahelp,*.evt,*.txt set cc=80
 
 set hlsearch " Highlight searches
+set list listchars=tab:»·,trail:· " highlight tabs and extra whitespaces
+
+" jump to last position when re-opening a file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal! g'\"" | endif
+endif
