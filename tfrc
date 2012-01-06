@@ -1,0 +1,13 @@
+/def upload=/quote -0 -w !perl ~/Projects/wcnh_systems/softcode/unformat.pl ~/Projects/wcnh_systems/softcode/%1.mush
+/more on
+/visual on
+/addworld -T"tiny.mush" Local localhost 2199
+/addworld -x -T"tiny.mush" WCNH wcmush.com 2299
+/set isize=5
+/set wrapsize=80
+/set wrapspace=0
+/load kb-old.tf
+/load world-q.tf
+/def key_f1=/world WCNH
+/def key_f2=/world local
+
