@@ -1,10 +1,10 @@
 set nu
-syntax on 
+syntax on
 set autoindent
 set shiftwidth=2
 set expandtab
 set tabstop=2
-set nobackup 
+set nobackup
 
 colorscheme railscasts
 set noantialias
@@ -15,6 +15,10 @@ map <F2> :NERDTreeToggle<CR>
 
 set laststatus=2
 set statusline=%t[%{strlen(&fenc)?&fenc:'none'}]%h%m%r\ %l/%L,%c\ %P\ %{fugitive#statusline()}
+
+map X dd " single-key delete line
+
+cnoreabbrev W w " make :W actually do something
 
 autocmd BufRead,BufNewFile *.hlp,*.nws,*.ahelp,*.evt,*.txt set cc=80
 
