@@ -35,7 +35,7 @@ def git_cwd_dirty
 end
 
 def git_unpushed_commits
-  " %{\e[31m%}⇧%{\e[0m%}" unless `git log origin/master..HEAD`.empty?
+  " %{\e[31m%}⇧%{\e[0m%}" unless `git log origin/master..HEAD 2> /dev/null`.empty?
 end
 
 def rebasing_etc

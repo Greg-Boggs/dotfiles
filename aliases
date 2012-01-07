@@ -15,3 +15,5 @@ alias mongoup='sh ~/Projects/wcnh_mush/start_mongodb.sh'
 alias wmup='cd ~/Projects/wcnh_mush/game;sh restart'
 alias wmlog='cd ~/Projects/wcnh_mush/game/log;tail -f *.log'
 alias ww='cd ~/Projects/wcnh_web'
+alias tim='cd ~/Projects/timbabwe'
+
