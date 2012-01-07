@@ -1,2 +1,15 @@
+# commands
 alias vim='mvim'
+alias g='git'
+alias gaa='git add -A'
+alias gs='git status'
 
+# directories
+alias p='cd ~/Projects'
+alias dot='cd ~/Projects/dotfiles'
+alias pe='cd ~/Projects/pilotedge_rails'
+alias wm='cd ~/Projects/wcnh_mush'
+alias ws='cd ~/Projects/wcnh_systems'
+alias wsc='cd ~/Projects/wcnh_systems;./wcnh'
+alias mongoup='sh ~/Projects/wcnh_mush/start_mongodb.sh'
+alias ww='cd ~/Projects/wcnh_web'
