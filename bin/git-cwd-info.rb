@@ -23,7 +23,7 @@ def in_git_repo
 end
 
 def git_parse_branch
-  @git_parse_branch ||= `git branch --no-color 2> /dev/null`[2..-2].chomp
+  @git_parse_branch ||= `git branch --no-color 2> /dev/null`.lines.grep(/^\*/).first[2..-2].chomp
 end
 
 def git_head_commit_id
