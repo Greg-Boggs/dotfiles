@@ -23,7 +23,7 @@ def in_git_repo
 end
 
 def git_parse_branch
-  @git_parse_branch ||= `git branch --no-color 2> /dev/null`.lines.grep(/^\*/).first[2..-2].chomp
+  @git_parse_branch ||= `git branch --no-color 2> /dev/null`.lines.grep(/^\*/).first[2..-2].chomp unless `git branch`.empty?
 end
 
 def git_head_commit_id
@@ -31,7 +31,11 @@ def git_head_commit_id
 end
 
 def git_cwd_dirty
-  " %{\e[97m%}✗%{\e[0m%}" unless git_repo_path == '.' || `git ls-files -mo --exclude-standard`.strip.empty?
+  " %{\e[97m%}✗%{\e[0m%}" unless git_repo_path == '.' || (`git diff --cached` + `git ls-files -mo --exclude-standard`).empty?
+end
+
+def git_unpushed_commits
+  " %{\e[31m%}⇧%{\e[0m%}" unless `git log origin/master..HEAD`.empty?
 end
 
 def rebasing_etc
@@ -45,5 +49,5 @@ def rebasing_etc
 end
 
 if in_git_repo
-  print " %{\e[36m%}#{git_parse_branch} %{\e[90m%}#{git_head_commit_id}%{\e[0m%}#{rebasing_etc}#{git_cwd_dirty}"
+  print " %{\e[36m%}#{git_parse_branch} %{\e[90m%}#{git_head_commit_id}%{\e[0m%}#{rebasing_etc}#{git_cwd_dirty}#{git_unpushed_commits}"
 end
