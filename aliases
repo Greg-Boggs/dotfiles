@@ -3,6 +3,7 @@ alias vim='mvim'
 alias g='git'
 alias gaa='git add -A'
 alias gs='git status'
+alias ttytter='perl ~/Scripts/ttytter.pl'
 
 # directories
 alias p='cd ~/Projects'
@@ -16,4 +17,4 @@ alias wmup='cd ~/Projects/wcnh_mush/game;sh restart'
 alias wmlog='cd ~/Projects/wcnh_mush/game/log;tail -f *.log'
 alias ww='cd ~/Projects/wcnh_web'
 alias tim='cd ~/Projects/timbabwe'
-
+alias pj='cd ~/Projects/pennjson'
