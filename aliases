@@ -3,7 +3,7 @@ alias vim='mvim'
 alias g='git'
 alias gaa='git add -A'
 alias gs='git status'
-alias ttytter='perl ~/Scripts/ttytter.pl'
+alias ttytter='perl ~/.bin/ttytter.pl'
 
 # directories
 alias p='cd ~/Projects'
