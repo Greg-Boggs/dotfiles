@@ -4,6 +4,7 @@ alias g='git'
 alias gaa='git add -A'
 alias gs='git status'
 alias ttytter='perl ~/.bin/ttytter.pl'
+alias t='~/.bin/todo.sh -d ~/.todo/todo.cfg'
 
 # directories
 alias p='cd ~/Projects'

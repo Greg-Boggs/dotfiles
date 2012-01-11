@@ -23,6 +23,8 @@ export HISTSIZE=4096 # history
 export CLICOLOR="YES" # all CLI colors on 
 export LSCOLORS="ExGxFxdxCxDxDxhbadExEx" # standard colors for ls
 
+export TODOTXT_DEFAULT_ACTION=ls # allow just 't' to list tasks
+
 if [ -e "$HOME/.aliases" ] ; then source "$HOME/.aliases" ; fi # aliases
 
 # keybindings
