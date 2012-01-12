@@ -1,11 +1,15 @@
 [user]
-	name = Tim Krajcar
-	email = allegro@conmolto.org
+  name = Tim Krajcar
+  email = allegro@conmolto.org
 [color]
-	ui = true
-	diff = true
+  ui = true
+  diff = true
 [core]
-	autocrlf = input
-	excludesfile = /Users/tkrajcar/.gitignore
+  autocrlf = input
+  excludesfile = /Users/tkrajcar/.gitignore
 [apply]
-	whitespace = nowarn
+  whitespace = nowarn
+[url "ssh://git@git.drupal.org/project/"]
+    insteadOf = "drupal:"
+[url "ssh://git@git.drupal.org/sandbox/"]
+    insteadOf = "drupalsand:"
