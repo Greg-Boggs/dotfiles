@@ -1,8 +1,10 @@
 # commands
 alias vim='mvim'
 alias g='git'
+alias git='hub' # http://github.com/defunkt/hub/
 alias gaa='git add -A'
 alias gs='git status'
+alias gc='git commit'
 alias ttytter='perl ~/.bin/ttytter.pl'
 alias t='~/.bin/todo.sh -d ~/.todo/todo.cfg'
 
