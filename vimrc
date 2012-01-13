@@ -18,6 +18,10 @@ set statusline=%t[%{strlen(&fenc)?&fenc:'none'}]%h%m%r\ %l/%L,%c\ %P\ %{fugitive
 
 let mapleader=','
 
+" switch Command-t options so that enter opens a file in a new tab, and ctrl-tab in the same window.
+let g:CommandTAcceptSelectionMap = '<C-Tab>'
+let g:CommandTAcceptSelectionTabMap = '<CR>'
+
 map X dd " single-key delete line
 
 cnoreabbrev W w " make :W actually do something
