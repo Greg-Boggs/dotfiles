@@ -5,12 +5,12 @@ set shiftwidth=2
 set expandtab
 set tabstop=2
 set nobackup
+set nocompatible
 
 colorscheme railscasts
 set noantialias
 set guifont=Courier\ New:h12
 
-call pathogen#infect()
 map <F2> :NERDTreeToggle<CR>
 
 set laststatus=2
@@ -36,3 +36,16 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal! g'\"" | endif
 endif
+
+" Vundle config
+filetype off                   " required!
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+
+Bundle 'tpope/vim-fugitive'
+Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-rails'
+Bundle 'git://git.wincent.com/command-t.git'
+
+filetype plugin indent on     " required! 
