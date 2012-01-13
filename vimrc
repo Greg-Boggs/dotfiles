@@ -16,6 +16,8 @@ map <F2> :NERDTreeToggle<CR>
 set laststatus=2
 set statusline=%t[%{strlen(&fenc)?&fenc:'none'}]%h%m%r\ %l/%L,%c\ %P\ %{fugitive#statusline()}
 
+let mapleader=','
+
 map X dd " single-key delete line
 
 cnoreabbrev W w " make :W actually do something
