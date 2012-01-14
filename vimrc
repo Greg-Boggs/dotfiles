@@ -14,7 +14,6 @@ set guifont=Courier\ New:h12
 map <F2> :NERDTreeToggle<CR>
 
 set laststatus=2
-set statusline=%t[%{strlen(&fenc)?&fenc:'none'}]%h%m%r\ %l/%L,%c\ %P\ %{fugitive#statusline()}
 
 let mapleader=','
 
@@ -23,6 +22,8 @@ let g:CommandTAcceptSelectionMap = '<C-Tab>'
 let g:CommandTAcceptSelectionTabMap = '<CR>'
 
 map X dd " single-key delete line
+
+let g:Powerline_symbols = 'unicode'
 
 cnoreabbrev W w " make :W actually do something
 
@@ -47,5 +48,6 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-rails'
 Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'Lokaltog/vim-powerline'
 
 filetype plugin indent on     " required! 
