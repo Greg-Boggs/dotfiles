@@ -1,4 +1,5 @@
 if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi # RVM
+if [[ -s ~/.private ]] ; then source ~/.private ; fi
 
 # Colors
 autoload -U colors
@@ -22,6 +23,9 @@ export EDITOR='mvim' # all mvim all the time
 export HISTSIZE=4096 # history
 export CLICOLOR="YES" # all CLI colors on 
 export LSCOLORS="ExGxFxdxCxDxDxhbadExEx" # standard colors for ls
+
+export GITHUB_USER="tkrajcar"
+
 
 export TODOTXT_DEFAULT_ACTION=ls # allow just 't' to list tasks
 

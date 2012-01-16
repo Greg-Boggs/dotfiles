@@ -13,3 +13,6 @@
     insteadOf = "drupal:"
 [url "ssh://git@git.drupal.org/sandbox/"]
     insteadOf = "drupalsand:"
+[gist]
+  browse = yes
+  private = yes
