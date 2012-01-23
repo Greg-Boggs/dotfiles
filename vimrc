@@ -49,5 +49,6 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-rails'
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'scrooloose/syntastic'
 
 filetype plugin indent on     " required! 
