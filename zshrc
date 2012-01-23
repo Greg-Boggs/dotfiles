@@ -10,6 +10,12 @@ setopt prompt_subst
 PROMPT='%{$fg[green]%}%~%{$fg_bold[green]%}\$ %{$reset_color%}'
 RPROMPT='%{$fg[white]%} $(~/.bin/git-cwd-info.rb)%{$reset_color%}'
 
+# history
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+setopt APPEND_HISTORY
+
 setopt menucomplete # show completion on first tab
 
 # Load completions for Ruby, Git, etc.
