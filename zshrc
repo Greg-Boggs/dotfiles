@@ -1,6 +1,8 @@
 if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi # RVM
 if [[ -s ~/.private ]] ; then source ~/.private ; fi
 
+export PATH=/usr/local/bin:$PATH
+
 # Colors
 autoload -U colors
 colors
@@ -21,6 +23,8 @@ setopt menucomplete # show completion on first tab
 # Load completions for Ruby, Git, etc.
 autoload compinit
 compinit
+zstyle ':completion:*' menu select
+setopt completealiases
 
 setopt auto_cd # automatically enter directories without cd
 setopt EXTENDED_GLOB # super globbing
