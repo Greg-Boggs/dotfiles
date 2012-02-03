@@ -21,6 +21,13 @@ let mapleader=','
 let g:CommandTAcceptSelectionMap = '<C-Tab>'
 let g:CommandTAcceptSelectionTabMap = '<CR>'
 
+" trigger CommandTFlush when returning to vim or when writing a buffer
+augroup CommandTExtension
+  autocmd!
+  autocmd FocusGained * CommandTFlush
+  autocmd BufWritePost * CommandTFlush
+augroup END
+
 map X dd " single-key delete line
 
 let g:Powerline_symbols = 'unicode'
