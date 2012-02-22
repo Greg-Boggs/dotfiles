@@ -57,5 +57,6 @@ Bundle 'tpope/vim-rails'
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/syntastic'
+Bundle 'int3/vim-extradite'
 
 filetype plugin indent on     " required! 
