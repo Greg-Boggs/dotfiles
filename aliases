@@ -8,6 +8,7 @@ alias gc='git commit'
 alias ttytter='perl ~/.bin/ttytter.pl'
 alias t='~/.bin/todo.sh -d ~/.todo/todo.cfg'
 alias sharediff='git diff | gist -p -t diff | pbcopy'
+alias shorten='isgd `pbpaste` | pbcopy'
 
 # directories
 alias p='cd ~/Projects'
