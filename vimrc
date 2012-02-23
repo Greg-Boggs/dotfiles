@@ -58,5 +58,38 @@ Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/syntastic'
 Bundle 'int3/vim-extradite'
+Bundle 'majutsushi/tagbar'
 
 filetype plugin indent on     " required! 
+
+
+" ==============================
+" Window/Tab/Split Manipulation
+" ==============================
+" Move between split windows by using the four directions H, L, I, N
+" (note that  I use I and N instead of J and K because  J already does
+" line joins and K is mapped to GitGrep the current word
+nnoremap <silent> H <C-w>h
+nnoremap <silent> L <C-w>l
+nnoremap <silent> I <C-w>k
+nnoremap <silent> M <C-w>j
+
+" Use numbers to pick the tab you want (like iTerm)
+map <silent> <D-1> :tabn 1<cr>
+map <silent> <D-2> :tabn 2<cr>
+map <silent> <D-3> :tabn 3<cr>
+map <silent> <D-4> :tabn 4<cr>
+map <silent> <D-5> :tabn 5<cr>
+map <silent> <D-6> :tabn 6<cr>
+map <silent> <D-7> :tabn 7<cr>
+map <silent> <D-8> :tabn 8<cr>
+map <silent> <D-9> :tabn 9<cr>
+
+" Create window splits easier. The default
+" way is Ctrl-w,v and Ctrl-w,s. I remap
+" this to vv and ss
+nnoremap <silent> vv <C-w>v
+nnoremap <silent> ss <C-w>s
+
+"open the tagbar using ,t
+nnoremap <silent> ,T :TagbarToggle<CR>
