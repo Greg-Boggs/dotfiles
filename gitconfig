@@ -1,6 +1,7 @@
 [user]
-  name = Tim Krajcar
-  email = allegro@conmolto.org
+	name = Tim Krajcar
+	email = allegro@conmolto.org
+	signingkey = 8D6A00B1
 [color]
   ui = true
   diff = true
