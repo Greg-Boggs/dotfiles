@@ -1,7 +1,6 @@
 # commands
 alias vim='mvim'
 alias g='git'
-alias git='hub' # http://github.com/defunkt/hub/
 alias gaa='git add -A'
 alias gs='git status'
 alias gc='git commit'
@@ -23,3 +22,4 @@ alias wmlog='cd ~/Projects/wcnh_mush/game/log;tail -f *.log'
 alias ww='cd ~/Projects/wcnh_web'
 alias tim='cd ~/Projects/timbabwe'
 alias pj='cd ~/Projects/pennjson'
+alias vpp='cd ~/Projects/varian_patientportal'
