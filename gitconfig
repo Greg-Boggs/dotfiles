@@ -65,3 +65,5 @@
 	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
 [difftool]
 	prompt = false
+[push]
+	default = matching
