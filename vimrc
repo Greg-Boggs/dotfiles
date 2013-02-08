@@ -59,6 +59,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/syntastic'
 Bundle 'int3/vim-extradite'
 Bundle 'majutsushi/tagbar'
+Bundle 'Valloric/YouCompleteMe'
 
 filetype plugin indent on     " required! 
 
