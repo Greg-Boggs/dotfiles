@@ -29,6 +29,14 @@ servers = (
     port = "6667";
     use_ssl = "no";
     ssl_verify = "no";
+    autoconnect = "no";
+  },
+  {
+    address = "irc.synirc.net";
+    chatnet = "SynIRC";
+    port = "6667";
+    use_ssl = "no";
+    ssl_verify = "no";
     autoconnect = "yes";
   }
 );
@@ -97,13 +105,16 @@ chatnets = {
   };
   SILC = { type = "SILC"; };
   Freenode = { type = "IRC"; nick = "tkrajcar"; };
+  SynIRC = { type = "IRC"; nick = "aunt_jemima"; };
 };
 
 channels = (
   { name = "#irssi"; chatnet = "ircnet"; autojoin = "No"; },
-  { name = "#drupal-pdx"; chatnet = "Freenode"; autojoin = "yes"; },
-  { name = "#pdx.rb"; chatnet = "Freenode"; autojoin = "yes"; },
-  { name = "#tngdev"; chatnet = "Freenode"; autojoin = "yes"; }
+  { name = "#drupal-pdx"; chatnet = "Freenode"; autojoin = "no"; },
+  { name = "#pdx.rb"; chatnet = "Freenode"; autojoin = "no"; },
+  { name = "#tngdev"; chatnet = "Freenode"; autojoin = "no"; },
+  { name = "#flightsim"; chatnet = "SynIRC"; autojoin = "yes"; },
+  { name = "#bearops"; chatnet = "SynIRC"; autojoin = "yes"; }
 );
 
 aliases = {
@@ -285,10 +296,23 @@ settings = {
   "perl/core/scripts" = { awl_display_key = "$Q%K|%n$H$C$S"; };
 };
 ignores = (
+  { 
+    level = "JOINS PARTS QUITS NICKS";
+    channels = ( "#rubyonrails" );
+  },
+  { level = "JOINS PARTS QUITS NICKS"; channels = ( "#drupal-pnw" ); },
+  { level = "JOINS PARTS QUITS NICKS"; channels = ( "#startups" ); },
+  {
+    level = "JOINS PARTS QUITS NICKS";
+    channels = ( "#drupal-infrastructure" );
+  },
   {
     level = "JOINS PARTS QUITS NICKS";
     channels = ( "#drupal", "#drupal-pdx", "#pdx.rb" );
   }
 );
 keyboard = ( { key = "meta-w"; id = "active_window"; data = ""; } );
-hilights = ( { text = "tkrajcar"; nick = "no"; word = "no"; } );
+hilights = (
+  { text = "tkrajcar"; nick = "no"; word = "no"; },
+  { text = "AJ"; nick = "no"; word = "yes"; }
+);
