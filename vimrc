@@ -60,6 +60,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'int3/vim-extradite'
 Bundle 'majutsushi/tagbar'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'airblade/vim-gitgutter'
 
 filetype plugin indent on     " required! 
 
