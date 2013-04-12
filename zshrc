@@ -52,3 +52,5 @@ precmd () {
   echo -ne "\e]2;${tab_label}\a" # set window title to full string
   echo -ne "\e]1;${tab_label: -24}\a" # set tab title to rightmost 24 characters
 }
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
