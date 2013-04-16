@@ -314,5 +314,6 @@ ignores = (
 keyboard = ( { key = "meta-w"; id = "active_window"; data = ""; } );
 hilights = (
   { text = "tkrajcar"; nick = "no"; word = "no"; },
-  { text = "AJ"; nick = "no"; word = "yes"; }
+  { text = "AJ"; nick = "no"; word = "yes"; },
+  { text = "aunt_jemima"; nick = "yes"; word = "yes"; }
 );
