@@ -12,7 +12,7 @@ alias shorten='isgd `pbpaste` | pbcopy'
 # directories
 alias p='cd ~/Projects'
 alias dot='cd ~/Projects/dotfiles'
-alias pe='cd ~/Projects/pilotedge_rails'
+alias pe='cd ~/Projects/pilotedge_web'
 alias wm='cd ~/Projects/wcnh_mush'
 alias ws='cd ~/Projects/wcnh_systems'
 alias wsc='cd ~/Projects/wcnh_systems;./wcnh'
