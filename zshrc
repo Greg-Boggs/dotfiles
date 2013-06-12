@@ -1,3 +1,4 @@
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi # RVM
 if [[ -s ~/.private ]] ; then source ~/.private ; fi
 
