@@ -1,7 +1,7 @@
 [user]
-	name = Tim Krajcar
-	email = allegro@conmolto.org
-	signingkey = 8D6A00B1
+  name = Tim Krajcar
+  email = allegro@conmolto.org
+  signingkey = 8D6A00B1
 [color]
   ui = true
   diff = true
@@ -39,6 +39,7 @@
 [core]
   autocrlf = input
   excludesfile = /Users/tkrajcar/.gitignore
+  mergeoptions = --no-edit
 [format]
   pretty = format:%C(cyan)%ad%Creset %C(yellow)%h%C(red)%d%Creset %C(green)%s %C(magenta) [%an]%Creset
 [apply]
@@ -53,22 +54,22 @@
 [advice]
   statusHints = false
 [diff]
-	tool = Kaleidoscope
+  tool = Kaleidoscope
 [difftool "diffmerge"]
-	cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
+  cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
 [merge]
-	tool = Kaleidoscope
+  tool = Kaleidoscope
 [mergetool "diffmerge"]
-	cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
-	trustExitCode = true
+  cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
+  trustExitCode = true
 [difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [difftool]
-	prompt = false
+  prompt = false
 [push]
-	default = matching
+  default = matching
 [mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustExitCode = true
+  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+  trustExitCode = true
 [mergetool]
-	prompt = false
+  prompt = false
