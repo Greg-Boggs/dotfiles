@@ -2,7 +2,7 @@
 if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi # RVM
 if [[ -s ~/.private ]] ; then source ~/.private ; fi
 
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=/Users/tkrajcar/.bin:/usr/local/bin:/usr/local/sbin:$PATH
 export DRUSH_PHP=/Applications/MAMP/bin/php/php5.3.14/bin/php
 
 # Colors
