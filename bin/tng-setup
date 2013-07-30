@@ -5,7 +5,7 @@
 require 'rubygems' # for pre-1.9
 require 'git'
 
-STDOUT.sync = true
+STDOUT.sync = true # for 1.8.7, don't buffer prints
 
 if ARGV.length != 1
   abort "Usage: tng-setup <project name>\n"
@@ -30,7 +30,8 @@ end
 if g.branches.map(&:name).include? "production"
   print "Local production branch exists.\n"
 else
-  print "No local production branch found, creating...\n"
+  print "No local production branch found, creating off master...\n"
+  g.branch('master').checkout # ensure we're on master
   g.branch('production')
   g.branch('production').checkout # apparently necessary for the branch to be 'saved'?
   g.branch('master').checkout
