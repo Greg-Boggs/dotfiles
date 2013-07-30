@@ -42,4 +42,4 @@ g.config('gitflow.branch.develop', 'master')
 print "Running git flow init...\n"
 `cd #{directory} && git flow init -d`
 
-print "All done! Create a feature branch and code away!\n"
+print "All done! More info https://github.com/nvie/gitflow to begin type: git flow feature start <your feature>\n"
