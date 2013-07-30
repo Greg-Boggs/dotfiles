@@ -2,9 +2,10 @@
 #vim: set ft=ruby
 #
 # Sets up a TNG project for local development.
-
 require 'rubygems' # for pre-1.9
 require 'git'
+
+STDOUT.sync = true
 
 if ARGV.length != 1
   abort "Usage: tng-setup <project name>\n"
@@ -17,7 +18,7 @@ end
 
 directory = ARGV[0]
 
-if Dir.exists?(directory)
+if File.exists?(directory)
   print "Existing directory found, skipping clone.\n"
   g = Git.open(directory)
 else
