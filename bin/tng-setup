@@ -1,0 +1,43 @@
+#!/usr/bin/env ruby
+#vim: set ft=ruby
+#
+# Sets up a TNG project for local development.
+
+require 'rubygems' # for pre-1.9
+require 'git'
+
+if ARGV.length != 1
+  abort "Usage: tng-setup <project name>\n"
+end
+
+`git flow version`
+if $?.exitstatus > 0
+  abort "git flow is not installed!\n"
+end
+
+directory = ARGV[0]
+
+if Dir.exists?(directory)
+  print "Existing directory found, skipping clone.\n"
+  g = Git.open(directory)
+else
+  print "Cloning #{directory} from Beanstalk..."
+  g = Git.clone("git@thenewgroup.beanstalkapp.com:/#{directory}.git", directory)
+  print " Done.\n"
+end
+
+if g.branches.map(&:name).include? "production"
+  print "Local production branch exists.\n"
+else
+  print "No local production branch found, creating...\n"
+  g.branch('production')
+  g.branch('production').checkout # apparently necessary for the branch to be 'saved'?
+  g.branch('master').checkout
+end
+
+g.config('gitflow.branch.master', 'production')
+g.config('gitflow.branch.develop', 'master')
+print "Running git flow init...\n"
+`cd #{directory} && git flow init -d`
+
+print "All done! Create a feature branch and code away!\n"
